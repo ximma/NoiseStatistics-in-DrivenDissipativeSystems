@@ -96,8 +96,7 @@ Pkg.add(url="https://github.com/ximma/NoiseStatistics-in-DrivenDissipativeSystem
 
 and then `using DrivenDissipativeNoise`.
 
-Julia 1.11 or 1.12 (GeneralizedGrossPitaevskii.jl v0.1.0 is installed from its repository through `[sources]`; it does
-not support Julia 1.13). Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
+Julia 1.11 or later (GeneralizedGrossPitaevskii.jl v0.2.1 is installed from its repository through `[sources]`). Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
 
 ## Citing
 

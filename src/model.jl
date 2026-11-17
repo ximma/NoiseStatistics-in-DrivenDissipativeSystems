@@ -81,8 +81,9 @@ host at every half-step, e.g. for moving wavepackets.
 
 GGP's generic pump kernel is slow on CPUs for anything beyond an array lookup, so this
 type overrides `evaluate_pump!`. On the CPU it fills columns with threads; on other array
-types it uses one broadcast. `t_shift = -dt` compensates for GGP v0.1.0 evaluating the pump
-one time step late (its `solve!` advances `t` before calling `step!`).
+types it uses one broadcast. The time loop (`_solve!`, `advance!`) passes `step!` the time
+at the end of the step, as `GGP.solve!` v0.1.0 did, which puts the pump one step late;
+`t_shift = -dt` compensates for it.
 """
 struct PolaritonPump{AF,AS,P,T,E,EB}
     F::AF
@@ -214,9 +215,35 @@ function evolve(s::Setup, u0::AbstractArray, tspan; dt, nsaves::Integer=1, save_
     ΔT = (tspan[2] - tspan[1]) / nsaves
     _dt, _ = effective_dt(dt, ΔT)
     prob = gpe_problem(s, u0, _dt; probe, noise, envelope, extra, pump_timing)
-    ts, sol = GGP.solve(prob, GGP.StrangSplitting(), T.(tspan); dt=_dt * (1 + 1e-10), nsaves,
+    iter = GGP.init(prob, GGP.StrangSplitting(), T.(tspan); dt=T(_dt * (1 + 1e-10)), nsaves,
         save_start, show_progress, rng)
+    ts, sol = _solve!(iter)
     ts, first(sol)
+end
+
+# Fixed-step time loop, in place of `GGP.solve!`. GGP v0.1.0 advanced t before each step,
+# calling `step!(iter, t, dt)` for the step from t − dt to t, so the pump was evaluated at
+# t + dt/2 and t + dt, one step late; GGP ≥ 0.2 calls `step!(iter, t − dt, dt)`. This loop
+# keeps the v0.1.0 sequence whatever the GGP version, and `PolaritonPump.t_shift` (−dt for
+# :corrected, 0 for :ggp) sets the time at which the pump is actually evaluated. Results are
+# bit-identical to those of `GGP.solve` v0.1.0.
+function _solve!(iter)
+    dt, ts, s0 = iter.dt, iter.ts, iter.save_start
+    nd = ndims(first(iter.result))
+    t = ts[1]
+    for n in 1:(size(first(iter.result), nd) - s0)
+        for _ in 1:iter.steps_per_save
+            t += dt
+            GGP.step!(iter, t, dt)
+            GGP._next!(iter.progress)
+        end
+        for (r, u) in zip(iter.result, iter.u)
+            copy!(selectdim(r, nd, n + s0), u)
+        end
+        ts[n+1] = t
+    end
+    GGP._finish!(iter.progress, iter.given_progress)
+    ts[begin+1-s0:end], iter.result
 end
 
 """
@@ -272,7 +299,7 @@ end
 function advance!(st::Stepper, n::Integer)
     for _ in 1:n
         st.t += st.dt
-        GGP.step!(st.iter, st.t, st.dt)            # same sequence as GGP.solve!
+        GGP.step!(st.iter, st.t, st.dt)            # same sequence as `_solve!`
     end
     st
 end

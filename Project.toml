@@ -17,15 +17,15 @@ Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 [compat]
 DelimitedFiles = "1.9.1"
 FFTW = "1.10.0"
-GeneralizedGrossPitaevskii = "0.1.0"
+GeneralizedGrossPitaevskii = "0.2"
 KernelAbstractions = "0.9.45"
 LinearAlgebra = "1.11.0"
 Random = "1.11.0"
 Serialization = "1.11.0"
 StaticArrays = "1.9.24"
 Statistics = "1.11.5"
-julia = "1.11 - 1.12"
+julia = "1.11"
 
 
 [sources]
-GeneralizedGrossPitaevskii = {url = "https://github.com/marcsgil/GeneralizedGrossPitaevskii.jl", rev = "v0.1.0"}
+GeneralizedGrossPitaevskii = {url = "https://github.com/marcsgil/GeneralizedGrossPitaevskii.jl", rev = "v0.2.1"}
