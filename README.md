@@ -109,10 +109,10 @@ of the methods you use.
 <!-- BEGIN CREDITS -->
 ## Contributors
 
-- Maxime J. Jacquet (Laboratoire Kastler Brossel), author, [ORCID 0000-0003-0977-7054](https://orcid.org/0000-0003-0977-7054).
-- Mattheus Burkhard and Malte Kroj wrote the simulations of Ref. [1], whose stimulated-scattering and ringdown
+- Maxime J. Jacquet (then at Laboratoire Kastler Brossel), author, [ORCID 0000-0003-0977-7054](https://orcid.org/0000-0003-0977-7054).
+- Mattheus Burkhard (then at BEC-Center Trento) and Malte Kroj (the at Laboratoire Kastler Brossel) wrote the simulations of Ref. [1], whose stimulated-scattering and ringdown
   protocols this package follows.
-- Marcos Gil de Oliveira ([marcsgil](https://github.com/marcsgil), [ORCID 0009-0006-4225-8706](https://orcid.org/0009-0006-4225-8706))
+- Marcos Gil de Oliveira (then at Laboratoire Kastler Brossel, [marcsgil](https://github.com/marcsgil), [ORCID 0009-0006-4225-8706](https://orcid.org/0009-0006-4225-8706))
   wrote GeneralizedGrossPitaevskii.jl and the truncated-Wigner protocol of Ref. [2].
 <!-- END CREDITS -->
 
