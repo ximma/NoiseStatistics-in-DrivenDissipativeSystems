@@ -1,0 +1,31 @@
+name = "PolaritonHorizons"
+uuid = "c7d1af77-9223-4d4c-8821-1ea2f20004df"
+authors = ["Maxime J. Jacquet <maximjacquet@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+GeneralizedGrossPitaevskii = "1c32f1f8-fc12-41ee-a188-d96e58f04b51"
+KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+
+[compat]
+DelimitedFiles = "1.9.1"
+FFTW = "1.10.0"
+GeneralizedGrossPitaevskii = "0.1.0"
+KernelAbstractions = "0.9.45"
+LinearAlgebra = "1.11.0"
+Random = "1.11.0"
+Serialization = "1.11.0"
+StaticArrays = "1.9.24"
+Statistics = "1.11.5"
+julia = "1.10"
+
+
+[sources]
+GeneralizedGrossPitaevskii = {url = "https://github.com/marcsgil/GeneralizedGrossPitaevskii.jl", rev = "v0.1.0"}

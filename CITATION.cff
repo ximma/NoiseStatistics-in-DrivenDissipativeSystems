@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release below and the papers of the methods you use."
+title: "PolaritonHorizons.jl: quantum noise of driven-dissipative bosonic fields, with polariton horizons"
+type: software
+license: MIT
+version: 0.1.0
+# doi: 10.5281/zenodo.XXXXXXX        (filled in after the first Zenodo release)
+repository-code: "https://github.com/ximma/PolaritonHorizons.jl"
+keywords:
+  - driven-dissipative systems
+  - quantum noise
+  - truncated Wigner
+  - Bogoliubov theory
+  - exciton-polaritons
+  - analogue gravity
+authors:
+  - family-names: Jacquet
+    given-names: Maxime J.
+    email: maximjacquet@gmail.com
+    orcid: "https://orcid.org/0000-0003-0977-7054"
+    affiliation: "Laboratoire Kastler Brossel, Sorbonne Université, CNRS, ENS-Université PSL, Collège de France"
+references:
+  - type: software
+    title: GeneralizedGrossPitaevskii.jl
+    authors:
+      - family-names: Gil de Oliveira
+        given-names: Marcos
+        orcid: "https://orcid.org/0009-0006-4225-8706"
+    url: "https://github.com/marcsgil/GeneralizedGrossPitaevskii.jl"
+  - type: article
+    title: "Stimulated Hawking effect and quasinormal mode resonance in a polariton simulator of field theory on curved spacetime"
+    authors:
+      - {family-names: Burkhard, given-names: Mattheus}
+      - {family-names: Kroj, given-names: Malte}
+      - {family-names: Falque, given-names: Kévin}
+      - {family-names: Bramati, given-names: Alberto}
+      - {family-names: Carusotto, given-names: Iacopo}
+      - {family-names: Jacquet, given-names: Maxime J.}
+    journal: "Comptes Rendus. Physique"
+    volume: 25
+    start: 341
+    year: 2026
+    doi: 10.5802/crphys.278
+  - type: article
+    title: "Momentum correlations of the Hawking effect in a quantum fluid"
+    authors:
+      - {family-names: Gil de Olivera, given-names: Marcos}
+      - {family-names: Joly, given-names: Malo}
+      - {family-names: Khoury, given-names: Antonio Z.}
+      - {family-names: Bramati, given-names: Alberto}
+      - {family-names: Jacquet, given-names: Maxime J.}
+    journal: "Physical Review A"
+    volume: 114
+    start: L021701
+    year: 2026
+    doi: 10.1103/xsxb-f1rh

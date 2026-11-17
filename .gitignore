@@ -1,0 +1,5 @@
+Manifest.toml
+*.jls
+*.jld2
+examples/output/
+results/

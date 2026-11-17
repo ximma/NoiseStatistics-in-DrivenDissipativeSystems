@@ -1,0 +1,19 @@
+{
+  "title": "PolaritonHorizons.jl: quantum noise of driven-dissipative bosonic fields, with polariton horizons",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {"name": "Jacquet, Maxime J.", "orcid": "0000-0003-0977-7054",
+     "affiliation": "Laboratoire Kastler Brossel, Sorbonne Université, CNRS, ENS-Université PSL, Collège de France"}
+  ],
+  "contributors": [
+    {"name": "Burkhard, Mattheus", "type": "Researcher"},
+    {"name": "Kroj, Malte", "type": "Researcher"},
+    {"name": "Gil de Oliveira, Marcos", "orcid": "0009-0006-4225-8706", "type": "Researcher"}
+  ],
+  "keywords": ["driven-dissipative systems", "quantum noise", "truncated Wigner", "Bogoliubov theory", "exciton-polaritons", "analogue gravity"],
+  "related_identifiers": [
+    {"identifier": "10.5802/crphys.278", "relation": "isSupplementTo", "scheme": "doi"},
+    {"identifier": "10.1103/xsxb-f1rh", "relation": "isSupplementTo", "scheme": "doi"}
+  ]
+}
