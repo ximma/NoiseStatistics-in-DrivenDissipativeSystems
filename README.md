@@ -9,16 +9,17 @@ field, its collective excitations, the noise they carry with every input of the 
 records of it, and it checks the linear theory against stochastic simulations of the full nonlinear equation.
 
 The implementation used to develop and test it is a fluid of exciton–polaritons in a semiconductor microcavity, with
-the parameters of the GaAs sample of the Laboratoire Kastler Brossel [3–7]. The fluid is driven by a pump of
+the parameters of the GaAs sample used in experiments Refs. [3–7]. The fluid is driven by a continuous wave pump of
 controlled amplitude and phase, so that its flow, and in particular acoustic horizons where it turns from subsonic to
 supersonic, can be designed all-optically. The Hawking effect at such a horizon, the mixing of positive- and
-negative-norm excitations by the stationary flow, is the main physical application [1, 2].
+negative-norm excitations by the stationary flow, is the main physical application of these tests [1, 2].
+The applicability of the package extends much beyond this demanding and restrictive application.
 
 Units are µm, ps and meV; frequencies are in ps⁻¹, in the frame rotating at the pump frequency. Time integration uses
 [GeneralizedGrossPitaevskii.jl](https://github.com/marcsgil/GeneralizedGrossPitaevskii.jl) (Strang splitting, batched
 trajectories, CPU and GPU).
 
-## What it computes
+## Computes
 
 The field obeys the driven-dissipative Gross–Pitaevskii equation in the frame of the pump,
 
