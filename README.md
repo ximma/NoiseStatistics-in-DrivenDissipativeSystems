@@ -92,7 +92,7 @@ using Pkg
 Pkg.add(url="https://github.com/ximma/PolaritonHorizons.jl")
 ```
 
-Julia 1.10 or later. Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
+Julia 1.11 or later (GeneralizedGrossPitaevskii.jl is installed from its repository through `[sources]`). Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
 
 ## Citing
 
