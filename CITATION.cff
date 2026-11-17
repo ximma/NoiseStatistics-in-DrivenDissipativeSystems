@@ -4,7 +4,8 @@ title: "PolaritonHorizons.jl: quantum noise of driven-dissipative bosonic fields
 type: software
 license: MIT
 version: 0.1.0
-# doi: 10.5281/zenodo.XXXXXXX        (filled in after the first Zenodo release)
+date-released: 2026-11-17
+doi: 10.5281/zenodo.24301905
 repository-code: "https://github.com/ximma/PolaritonHorizons.jl"
 keywords:
   - driven-dissipative systems

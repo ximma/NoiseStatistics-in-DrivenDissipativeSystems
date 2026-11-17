@@ -1,5 +1,7 @@
 # PolaritonHorizons.jl
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24301905.svg)](https://doi.org/10.5281/zenodo.24301905)
+
 PolaritonHorizons.jl computes the statistics of the quantum noise of driven-dissipative bosonic fields in one
 dimension. A coherent pump sustains a stationary field against losses; the losses let the noise of the environment in,
 and the nonlinearity of the field mixes this noise into correlated excitations. The package computes the stationary
@@ -96,8 +98,8 @@ Julia 1.11 or later (GeneralizedGrossPitaevskii.jl is installed from its reposit
 
 ## Citing
 
-If you use this package, please cite the archived release (see [CITATION.cff](CITATION.cff); DOI on Zenodo) and the
-papers of the methods you use.
+If you use this package, please cite the archived release, DOI [10.5281/zenodo.24301905](https://doi.org/10.5281/zenodo.24301905)
+(see [CITATION.cff](CITATION.cff)), and the papers of the methods you use.
 
 <!-- BEGIN CREDITS -->
 ## Contributors
