@@ -10,7 +10,7 @@
 # and the vacuum part is checked against truncated-Wigner trajectories of the full nonlinear equation.
 #
 #   julia -t 4 --project=examples examples/uniform_fluid.jl          (a few minutes on a laptop)
-using PolaritonHorizons, CairoMakie, FFTW, LinearAlgebra, Printf, Random, Statistics
+using DrivenDissipativeNoise, CairoMakie, FFTW, LinearAlgebra, Printf, Random, Statistics
 
 out = mkpath(joinpath(@__DIR__, "output"))
 pol = lkb_gaas_polariton()                         # parabolic lower polariton, m* = 7.0e-35 kg, ħγ = 80 µeV

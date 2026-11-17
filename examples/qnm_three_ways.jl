@@ -10,7 +10,7 @@
 #       (`LinearResponse`, `respond`), and the response at the defect is fitted by a smooth background plus a pole.
 #
 #   julia -t 4 --project=examples examples/qnm_three_ways.jl          (about ten minutes on a laptop)
-using PolaritonHorizons, CairoMakie, LinearAlgebra, Printf
+using DrivenDissipativeNoise, CairoMakie, LinearAlgebra, Printf
 
 out = mkpath(joinpath(@__DIR__, "output"))
 s = burkhard2026()

@@ -1,5 +1,5 @@
 {
-  "title": "PolaritonHorizons.jl: quantum noise of driven-dissipative bosonic fields, with polariton horizons",
+  "title": "Noise statistics in driven-dissipative systems: the Julia package DrivenDissipativeNoise, with polariton horizons",
   "upload_type": "software",
   "license": "MIT",
   "creators": [

@@ -10,7 +10,7 @@
 # integrates the full equation from it.
 #
 #   julia -t 4 --project=examples examples/inverse_design.jl          (about a minute)
-using PolaritonHorizons, CairoMakie, LinearAlgebra, Printf
+using DrivenDissipativeNoise, CairoMakie, LinearAlgebra, Printf
 
 out = mkpath(joinpath(@__DIR__, "output"))
 pol = lkb_gaas_polariton()

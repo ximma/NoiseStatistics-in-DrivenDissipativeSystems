@@ -10,7 +10,7 @@
 # (see docs/methods.md) changes this flow by less than 0.3 %.
 #
 #   NTRAJ=20000 julia -t 4 --project=examples examples/reproduce_momentum_correlations.jl
-using PolaritonHorizons, CairoMakie, FFTW, Printf, Random
+using DrivenDissipativeNoise, CairoMakie, FFTW, Printf, Random
 
 out = mkpath(joinpath(@__DIR__, "output"))
 s = gildeoliveira2026()

@@ -1,5 +1,5 @@
 """
-    PolaritonHorizons
+    DrivenDissipativeNoise
 
 Driven-dissipative polariton fluids in 1+1D all-optically controlled geometries: mean
 field, LDA dispersion, stimulated (probe) and spontaneous (TWA) scattering at acoustic
@@ -8,7 +8,7 @@ GeneralizedGrossPitaevskii.jl (Strang splitting, CPU/GPU).
 
 Units: µm, ps, meV. Frequencies are in ps⁻¹, in the frame rotating at the pump frequency.
 """
-module PolaritonHorizons
+module DrivenDissipativeNoise
 
 using GeneralizedGrossPitaevskii, FFTW, LinearAlgebra, Statistics, Random
 

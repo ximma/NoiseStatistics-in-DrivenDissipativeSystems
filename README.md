@@ -1,9 +1,9 @@
-# PolaritonHorizons.jl
+# Noise statistics in driven-dissipative systems
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24301905.svg)](https://doi.org/10.5281/zenodo.24301905)
 
-PolaritonHorizons.jl computes the statistics of the quantum noise of driven-dissipative bosonic fields in one
-dimension. A coherent pump sustains a stationary field against losses; the losses let the noise of the environment in,
+The Julia package DrivenDissipativeNoise computes the statistics of the quantum noise of driven-dissipative bosonic
+fields in one dimension. A coherent pump sustains a stationary field against losses; the losses let the noise of the environment in,
 and the nonlinearity of the field mixes this noise into correlated excitations. The package computes the stationary
 field, its collective excitations, the noise they carry with every input of the environment, and what a detector
 records of it, and it checks the linear theory against stochastic simulations of the full nonlinear equation.
@@ -91,8 +91,10 @@ julia -t 4 --project=examples examples/uniform_fluid.jl
 
 ```julia
 using Pkg
-Pkg.add(url="https://github.com/ximma/PolaritonHorizons.jl")
+Pkg.add(url="https://github.com/ximma/NoiseStatistics-in-DrivenDissipativeSystems")
 ```
+
+and then `using DrivenDissipativeNoise`.
 
 Julia 1.11 or later (GeneralizedGrossPitaevskii.jl is installed from its repository through `[sources]`). Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
 

@@ -1,7 +1,7 @@
-using PolaritonHorizons, Test, FFTW, Statistics, LinearAlgebra, DelimitedFiles, Random
+using DrivenDissipativeNoise, Test, FFTW, Statistics, LinearAlgebra, DelimitedFiles, Random
 
 
-@testset "PolaritonHorizons" begin
+@testset "DrivenDissipativeNoise" begin
 
     pol = Polariton()
 
@@ -141,7 +141,7 @@ using PolaritonHorizons, Test, FFTW, Statistics, LinearAlgebra, DelimitedFiles, 
         C = [mean((Ia[i, :] .- mean(Ia[i, :])) .* (Ib[j, :] .- mean(Ib[j, :]))) for i in 1:6, j in 1:4]
         @test m.M2 ./ m.n ≈ C && m.G1 ≈ A * Bm' ./ 900
         m1, m2 = Moments(6, 4), Moments(6, 4); update!(m1, A[:, 1:300], Bm[:, 1:300]); update!(m2, A[:, 301:end], Bm[:, 301:end])
-        @test PolaritonHorizons.merge(m1, m2).M2 ≈ m.M2
+        @test DrivenDissipativeNoise.merge(m1, m2).M2 ≈ m.M2
         # identical windows: c12(k, k) = c11; gildeoliveira2026 windows equal the paper's (first index, length)
         s = gildeoliveira2026()
         w = SpatialWindow(s.grid, 262.0, 762.0)
@@ -240,7 +240,7 @@ using PolaritonHorizons, Test, FFTW, Statistics, LinearAlgebra, DelimitedFiles, 
         @test norm((pr.ω * I - M) * vcat(u, v) - b) < 1e-10 * norm(b)
         # norm continuity ∂ₓJ = −2κρ away from the probe
         J = norm_current(s, u, v)
-        dJ = real.(PolaritonHorizons._dx(s, complex.(J)))
+        dJ = real.(DrivenDissipativeNoise._dx(s, complex.(J)))
         r = findall(x -> 100 <= x <= 170, g.x)
         @test norm((dJ .+ 2 .* s.κ .* norm_density(u, v))[r]) < 1e-2 * norm((2 .* s.κ .* norm_density(u, v))[r])   # aliasing-limited on a coarse grid
         # exact balance between two points without source
@@ -450,7 +450,7 @@ using PolaritonHorizons, Test, FFTW, Statistics, LinearAlgebra, DelimitedFiles, 
             Sout = K2 * G * (κ * E2 + R * (phonon_occupation(b, ω) + 0.5) * [1 -1; -1 1]) * G' + (E2 - im * K2 * G + im * K2 * G') / 2
             real(Sout[1, 1]) - 0.5 - K2 * 2κ * abs2(G[1, 2])
         end
-        @test nphonon(-ωq, b4, 1e-4) / nphonon(ωq, b4, 1e-4) ≈ vu2 * exp(0.6582 * ωq / (PolaritonHorizons.KB_MEV * 4.0)) rtol = 1e-3
+        @test nphonon(-ωq, b4, 1e-4) / nphonon(ωq, b4, 1e-4) ≈ vu2 * exp(0.6582 * ωq / (DrivenDissipativeNoise.KB_MEV * 4.0)) rtol = 1e-3
         b0 = PhononBath(; T=0.0)                                   # T = 0: ghost line only
         @test abs(nphonon(ωq, b0, 1e-4)) < 1e-3 * nphonon(-ωq, b0, 1e-4)
         # grid implementation (PhononNoise) = the 2×2 pair model, flowing homogeneous fluid

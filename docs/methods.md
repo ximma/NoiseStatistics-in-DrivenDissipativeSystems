@@ -1,6 +1,6 @@
 # Methods
 
-PolaritonHorizons.jl computes the mean field, the linear response and the quantum noise of one-dimensional driven-dissipative bosonic fields, with exciton–polariton fluids in all-optically controlled geometries as the main application.
+The package DrivenDissipativeNoise computes the mean field, the linear response and the quantum noise of one-dimensional driven-dissipative bosonic fields, with exciton–polariton fluids in all-optically controlled geometries as the main application.
 In this document we state the equations the package solves and name the functions that implement each step.
 Two kinds of computation are used throughout.
 Time integration of the stochastic Gross–Pitaevskii equation (GPE) contains every nonlinear effect and is expensive.

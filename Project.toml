@@ -1,7 +1,7 @@
-name = "PolaritonHorizons"
+name = "DrivenDissipativeNoise"
 uuid = "c7d1af77-9223-4d4c-8821-1ea2f20004df"
 authors = ["Maxime J. Jacquet <maximjacquet@gmail.com>"]
-version = "0.1.0"
+version = "0.2.0-DEV"
 
 [deps]
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"

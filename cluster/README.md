@@ -19,6 +19,6 @@ Notes:
 - Seeds: each job seeds CUDA's default RNG with its job id. A CPU `Xoshiro` cannot fill GPU arrays.
 - Throughput reference: the 5.5×10⁸ trajectories of arXiv:2512.17807 took days on one GPU at batch 10⁴.
 - Precision: Float64 by default, as in the paper. Float32 is allowed for TWA but must first be validated against Float64 on a short run of the same size.
-- Combining runs: moments from different machines combine exactly (`PolaritonHorizons.merge`), so CPU and GPU runs can be pooled.
+- Combining runs: moments from different machines combine exactly (`DrivenDissipativeNoise.merge`), so CPU and GPU runs can be pooled.
 - Untested: the GPU path has only been reviewed, not run. The first run should be the short test above, compared with a CPU run of the same size.
 

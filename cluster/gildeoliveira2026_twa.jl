@@ -6,8 +6,8 @@
 # with cluster/merge_moments.jl. The noise RNG is CUDA's default RNG, seeded with JOB_ID,
 # so jobs are independent. Runs started from the stored steady state of the paper
 # (STEADY_STATE env var, a JLD2 file with key "steady_state") or from a fresh mean field.
-using PolaritonHorizons, CUDA, Random, Serialization, Printf, JLD2
-const PH = PolaritonHorizons
+using DrivenDissipativeNoise, CUDA, Random, Serialization, Printf, JLD2
+const PH = DrivenDissipativeNoise
 
 outdir, job, ntraj = ARGS[1], parse(Int, ARGS[2]), parse(Int, ARGS[3])
 batch = length(ARGS) >= 4 ? parse(Int, ARGS[4]) : 10_000

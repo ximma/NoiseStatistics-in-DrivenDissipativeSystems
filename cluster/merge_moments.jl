@@ -1,7 +1,7 @@
 # Merge the per-job moment files written by gildeoliveira2026_twa.jl into one file.
 #   julia --project=cluster cluster/merge_moments.jl OUTDIR [merged.jls]
-using PolaritonHorizons, Serialization, Printf
-const PH = PolaritonHorizons
+using DrivenDissipativeNoise, Serialization, Printf
+const PH = DrivenDissipativeNoise
 outdir = ARGS[1]
 files = filter(f -> startswith(f, "moments_") && endswith(f, ".jls"), readdir(outdir))
 isempty(files) && error("no moments_*.jls in $outdir")
