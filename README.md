@@ -1,6 +1,6 @@
 # Noise statistics in driven-dissipative systems
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24301905.svg)](https://doi.org/10.5281/zenodo.24301905)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24301904.svg)](https://doi.org/10.5281/zenodo.24301904)
 
 The Julia package DrivenDissipativeNoise computes the statistics of the quantum noise of driven-dissipative bosonic
 fields in one dimension. A coherent pump sustains a stationary field against losses; the losses let the noise of the environment in,
@@ -96,12 +96,15 @@ Pkg.add(url="https://github.com/ximma/NoiseStatistics-in-DrivenDissipativeSystem
 
 and then `using DrivenDissipativeNoise`.
 
-Julia 1.11 or later (GeneralizedGrossPitaevskii.jl is installed from its repository through `[sources]`). Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
+Julia 1.11 or 1.12 (GeneralizedGrossPitaevskii.jl v0.1.0 is installed from its repository through `[sources]`; it does
+not support Julia 1.13). Tests: `julia --project -e 'using Pkg; Pkg.test()'` (about a minute).
 
 ## Citing
 
-If you use this package, please cite the archived release, DOI [10.5281/zenodo.24301905](https://doi.org/10.5281/zenodo.24301905)
-(see [CITATION.cff](CITATION.cff)), and the papers of the methods you use.
+If you use this package, please cite the archived version you used (all versions:
+[10.5281/zenodo.24301904](https://doi.org/10.5281/zenodo.24301904); version 0.1.0:
+[10.5281/zenodo.24301905](https://doi.org/10.5281/zenodo.24301905); see [CITATION.cff](CITATION.cff)), and the papers
+of the methods you use.
 
 <!-- BEGIN CREDITS -->
 ## Contributors

@@ -5,7 +5,14 @@ type: software
 license: MIT
 version: 0.1.0
 date-released: 2026-11-17
-doi: 10.5281/zenodo.24301905
+doi: 10.5281/zenodo.24301904
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24301904
+    description: "All versions (concept DOI); resolves to the latest release"
+  - type: doi
+    value: 10.5281/zenodo.24301905
+    description: "Version 0.1.0"
 repository-code: "https://github.com/ximma/NoiseStatistics-in-DrivenDissipativeSystems"
 keywords:
   - driven-dissipative systems
